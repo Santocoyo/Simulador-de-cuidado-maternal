@@ -117,6 +117,30 @@ void loop() {
   if(difaccx>10000||difaccy>10000||difaccz>10000){
     maltrato==true;
   }
+  if(t.hour==3&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(t.hour==6&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(t.hour==9&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(t.hour==15&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(t.hour==18&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(t.hour==21&&t.min==0&&t.sec==0){
+    maltrato=true;
+  }
+  if(dht.readTemperature()>35){
+    maltrato=true;
+  }
+  if(dht.readTemperature()<18){
+    maltrato=true;
+  }
   if(digitalRead(5)){
     maltrato=false;
     noTone(buzzer);
@@ -166,6 +190,7 @@ void loop() {
   myFile.print(angle_roll_output);
   myFile.print(",");
   myFile.println(maltrato);
+  myFile.close();
   
   Serial.print(contador);
   Serial.print("\t");
