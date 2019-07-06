@@ -30,6 +30,7 @@ ax2.plot(data['contador'],data['maltrato'],color='orange',
 ax2.set_ylabel('Maltrato', color='orange')
 ax2.tick_params(axis='y', labelcolor='orange')
 plt.legend(loc = "upper left")
+plt.title("Temperatura")
 #----GRAFICA-DE-ACELERACION----------
 fig2, ax1 = plt.subplots()
 ax1.plot(data['contador'],data['acelX'],color='blue',
@@ -49,6 +50,7 @@ ax2.plot(data['contador'],data['maltrato'],color='orange',
 ax2.set_ylabel('Maltrato', color='orange')
 ax2.tick_params(axis='y', labelcolor='orange')
 plt.legend(loc = "best")
+plt.title("Aceleración")
 #-----GRAFICA-DE-VELOCIDAD-ANGULAR----------
 fig3, ax1 = plt.subplots()
 ax1.plot(data['contador'],data['gyroX'],color='blue',
@@ -68,6 +70,7 @@ ax2.plot(data['contador'],data['maltrato'],color='orange',
 ax2.set_ylabel('Maltrato', color='orange')
 ax2.tick_params(axis='y', labelcolor='orange')
 plt.legend(loc = "upper right")
+plt.title("Velocidad angular")
 #-----GRAFICA-DE-ANGULO---------
 fig4, ax1 = plt.subplots()
 ax1.plot(data['contador'],data['pitch'],color='blue',
@@ -85,6 +88,7 @@ ax2.plot(data['contador'],data['maltrato'],color='orange',
 ax2.set_ylabel('Maltrato', color='orange')
 ax2.tick_params(axis='y', labelcolor='orange')
 plt.legend(loc = "upper right")
+plt.title("Angulo")
 #----------------
 plt.show()
 
