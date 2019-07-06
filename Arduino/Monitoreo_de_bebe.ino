@@ -1,5 +1,4 @@
 #include <Wire.h>
-#include "EmonLib.h"
 #include <DHT.h>
 #include <DS1302.h>
 #include <SD.h>
